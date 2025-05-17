@@ -1,65 +1,130 @@
+import hubbleLogo from '../assets/hubble_vote_logo.jpeg';
+import webstaurantLogo from '../assets/webstaurantstore_com_logo.jpeg';
+import bbLogo from '../assets/bb_logo.jpeg';
+import osuLogo from '../assets/osu_logo.jpeg';
+import appianLogo from '../assets/appian_corporation_logo.jpeg';
+
 import { motion } from 'framer-motion';
 import { FiBriefcase, FiAward, FiCode, FiUsers } from 'react-icons/fi';
+
+// Placeholder logo URLs - replace these with your actual logos later
+const COMPANY_LOGOS = {
+  'Hubble': hubbleLogo,
+  'WebstaurantStore': webstaurantLogo,
+  'Business Builders': bbLogo,
+  'The Ohio State University': osuLogo,
+  'Appian': appianLogo,
+};
 
 const experiences = [
   {
     id: 1,
-    role: 'Software Engineering Intern',
-    company: 'Tech Innovations Inc.',
-    period: 'May 2023 - Aug 2023',
-    location: 'San Francisco, CA',
+    role: 'Software Development Intern',
+    company: 'Hubble',
+    period: 'Jan 2024 - Apr 2024',
+    location: 'Worthington, OH',
     description: [
-      'Developed and maintained web applications using React and Node.js, improving user experience and performance',
-      'Collaborated with cross-functional teams to design and implement new features',
-      'Optimized database queries, reducing API response times by 30%',
-      'Participated in code reviews and contributed to team knowledge sharing'
+      'Built features using Ruby, Rails, and PostgreSQL, focusing on APIs, schema design, and queries, enhancing system performance by 15%',
+      'Optimized performance with Redis caching and Sidekiq background job processing, reducing system runtime by 10%',
+      'Developed responsive interfaces with Hotwired (Turbo & StimulusJS) and front-end technologies, improving user satisfaction by 50%'
     ],
-    skills: ['React', 'Node.js', 'MongoDB', 'REST APIs', 'Agile'],
+    skills: ['Ruby', 'Rails', 'PostgreSQL', 'Redis', 'Sidekiq', 'Hotwired'],
     icon: <FiBriefcase className="w-6 h-6" />
   },
   {
     id: 2,
-    role: 'Research Assistant',
-    company: 'University AI Lab',
-    period: 'Jan 2023 - Present',
-    location: 'Boston, MA',
+    role: 'Software QA Intern',
+    company: 'WebstaurantStore',
+    period: 'May 2024 - Sep 2024',
+    location: 'Lititz, PA',
     description: [
-      'Conducted research on machine learning algorithms for natural language processing',
-      'Implemented and tested deep learning models using PyTorch',
-      'Published research findings in a peer-reviewed conference',
-      'Mentored junior students in machine learning concepts'
+      'Developed 15+ automated tests using Groovy and Selenium WebDriver, covering 50+ unique test cases, increasing test coverage by 25%',
+      'Integrated UI/API testing into CI/CD with Azure DevOps, enhancing team efficiency and reliability',
+      'Wrote 10+ SQL scripts to ensure continuity between internal APIs and databases, improving data reliability'
     ],
-    skills: ['Python', 'PyTorch', 'NLP', 'Research'],
+    skills: ['Groovy', 'Selenium WebDriver', 'SQL', 'Azure DevOps'],
     icon: <FiCode className="w-6 h-6" />
   },
   {
     id: 3,
-    role: 'Teaching Assistant - Data Structures',
-    company: 'University Computer Science Dept.',
-    period: 'Sep 2022 - Dec 2022',
-    location: 'Boston, MA',
+    role: 'VP of Technology',
+    company: 'Business Builders',
+    period: 'Sep 2024 - May 2025',
+    location: 'Columbus, OH',
     description: [
-      'Assisted 100+ students in understanding data structures and algorithms',
-      'Conducted weekly office hours and review sessions',
-      'Graded assignments and provided constructive feedback',
-      'Created supplementary learning materials'
+      'Developed Business Builders website using React, engaging 30+ members and 200+ alumni, enhancing user engagement by 20%',
+      'Designed an alumni portal to connect alumni with the club through sponsorship & C-suite level mentorship, increasing alumni participation by 50%',
+      'Implemented Agile methodologies with a Notion dashboard, managing tasks across teams with 2-week sprints, improving project completion rate by 30%'
     ],
-    skills: ['Java', 'Algorithms', 'Teaching', 'Mentorship'],
+    skills: ['React', 'Agile', 'Notion'],
     icon: <FiUsers className="w-6 h-6" />
+  },
+  {
+    id: 4,
+    role: 'Undergraduate Teaching Assistant',
+    company: 'The Ohio State University',
+    period: 'Jan 2025 - May 2025',
+    location: 'Columbus, OH',
+    description: [
+      'Evaluated assignments for 100+ students, providing detailed, constructive feedback to enhance learning outcomes, improving overall student performance by 50%',
+      'Graded assignments and labs on data structures, focusing on key concepts such as OOP and recursion, ensuring a comprehensive understanding of fundamental CS concepts',
+      'Facilitated student understanding of complex course material through dedicated office hours, increasing student engagement and satisfaction by 100%'
+    ],
+    skills: ['Data Structures', 'Object-Oriented Programming', 'Recursion', 'Java'],
+    icon: <FiBriefcase className="w-6 h-6" />
+  },
+  {
+    id: 5,
+    role: 'Software QE Intern',
+    company: 'Appian',
+    period: 'June 2025 - August 2025',
+    location: 'McLean, VA',
+    description: [
+      'Exciting new opportunity starting soon!',
+      'Check back in June for updates on my summer internship experience.'
+    ],
+    skills: [],
+    icon: <FiBriefcase className="w-6 h-6" />,
+    isUpcoming: true
   }
+
 ];
 
 const ExperienceCard = ({ experience }) => {
+  const logoUrl = COMPANY_LOGOS[experience.company];
+  
   return (
     <motion.div
       initial={{ opacity: 0, y: 20 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
       transition={{ duration: 0.5 }}
-      className="relative pl-8 pb-8 border-l-2 border-blue-200 dark:border-blue-800 group"
+      className="relative pl-12 pb-8"
     >
-      <div className="absolute -left-2.5 top-0 w-4 h-4 rounded-full bg-blue-100 dark:bg-blue-900 border-4 border-blue-500 dark:border-blue-400 group-hover:scale-125 transition-transform"></div>
+      {/* Company Logo Container */}
+      <div className="absolute left-0 top-0 w-10 h-10 rounded-full bg-white dark:bg-gray-800 border-4 border-blue-500 dark:border-blue-400 flex items-center justify-center overflow-hidden shadow-md z-10">
+        {logoUrl ? (
+          <img
+            src={logoUrl}
+            alt={`${experience.company} logo`}
+            className="w-full h-full object-cover"
+            onError={(e) => {
+              console.error(`Failed to load image: ${e.target.src}`);
+              e.target.style.display = 'none';
+              const fallback = e.target.nextElementSibling;
+              if (fallback) fallback.style.display = 'flex';
+            }}
+          />
+        ) : null}
+        <div className="w-6 h-6 flex items-center justify-center text-blue-500" style={{ display: logoUrl ? 'none' : 'flex' }}>
+          {experience.icon}
+        </div>
+      </div>
       
+      {/* Timeline dot */}
+      <div className="absolute left-5 top-5 w-2 h-2 bg-blue-500 rounded-full z-0"></div>
+      
+      {/* Card Content */}
       <div className="bg-white dark:bg-gray-800 rounded-xl p-6 shadow-lg hover:shadow-xl transition-shadow">
         <div className="flex items-start justify-between mb-4">
           <div>
@@ -70,7 +135,7 @@ const ExperienceCard = ({ experience }) => {
               <span>{experience.location}</span>
             </div>
           </div>
-          <div className="px-3 py-1 bg-blue-100 dark:bg-blue-900/30 text-blue-800 dark:text-blue-200 text-sm font-medium rounded-full">
+          <div className="px-3 py-1 bg-blue-100 dark:bg-blue-900/30 text-blue-800 dark:text-blue-200 text-sm font-medium rounded-full whitespace-nowrap">
             {experience.period}
           </div>
         </div>
@@ -84,16 +149,22 @@ const ExperienceCard = ({ experience }) => {
           ))}
         </ul>
         
-        <div className="flex flex-wrap gap-2 mt-4 pt-4 border-t border-gray-100 dark:border-gray-700">
-          {experience.skills.map((skill, index) => (
-            <span
-              key={index}
-              className="px-3 py-1 bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-200 text-xs font-medium rounded-full"
-            >
-              {skill}
-            </span>
-          ))}
-        </div>
+        {experience.isUpcoming ? (
+          <div className="flex justify-center mt-4 pt-4 border-t border-gray-100 dark:border-gray-700">
+            <div className="text-gray-600 dark:text-gray-300 text-lg font-medium">Coming Soon...</div>
+          </div>
+        ) : (
+          <div className="flex flex-wrap gap-2 mt-4 pt-4 border-t border-gray-100 dark:border-gray-700">
+            {experience.skills.map((skill, index) => (
+              <span
+                key={index}
+                className="px-3 py-1 bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-200 text-xs font-medium rounded-full"
+              >
+                {skill}
+              </span>
+            ))}
+          </div>
+        )}
       </div>
     </motion.div>
   );
@@ -101,7 +172,7 @@ const ExperienceCard = ({ experience }) => {
 
 const Experience = () => {
   return (
-    <section id="experience" className="section bg-gray-50 dark:bg-gray-800/30">
+    <section id="experience" className="section bg-gray-50 dark:bg-gray-800/30 py-20">
       <div className="container">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -118,7 +189,7 @@ const Experience = () => {
         </motion.div>
 
         <div className="relative max-w-3xl mx-auto">
-          <div className="absolute left-0 top-0 bottom-0 w-0.5 bg-gradient-to-b from-blue-200 to-blue-500 dark:from-blue-900 dark:to-blue-400"></div>
+          <div className="absolute left-5 top-0 bottom-0 w-0.5 bg-gradient-to-b from-blue-200 to-blue-500 dark:from-blue-900 dark:to-blue-400"></div>
           
           <div className="space-y-12">
             {experiences.map((experience) => (
@@ -126,7 +197,7 @@ const Experience = () => {
             ))}
           </div>
           
-          <div className="absolute left-0 bottom-0 w-0.5 h-8 bg-gradient-to-b from-blue-500 to-transparent dark:from-blue-400"></div>
+          <div className="absolute left-5 bottom-0 w-0.5 h-8 bg-gradient-to-b from-blue-500 to-transparent dark:from-blue-400"></div>
         </div>
       </div>
     </section>
