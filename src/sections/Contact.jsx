@@ -75,19 +75,19 @@ const Contact = () => {
     {
       icon: <FiMail className="w-6 h-6" />,
       title: 'Email',
-      value: 'your.email@example.com',
-      href: 'mailto:your.email@example.com',
+      value: 'aarondhillon57@gmail.com',
+      href: 'mailto:aarondhillon57@gmail.com',
     },
     {
       icon: <FiPhone className="w-6 h-6" />,
       title: 'Phone',
-      value: '+1 (123) 456-7890',
-      href: 'tel:+11234567890',
+      value: '+1 (614) 377-8524',
+      href: 'tel:+16143778524',
     },
     {
       icon: <FiMapPin className="w-6 h-6" />,
       title: 'Location',
-      value: 'City, Country',
+      value: 'Columbus, OH',
     },
   ];
 
