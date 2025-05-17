@@ -6,22 +6,17 @@ const socialLinks = [
   {
     name: 'GitHub',
     icon: <FiGithub size={20} />,
-    url: 'https://github.com/yourusername',
+    url: 'https://github.com/Aaron-Dhillon',
   },
   {
     name: 'LinkedIn',
     icon: <FiLinkedin size={20} />,
-    url: 'https://linkedin.com/in/yourusername',
-  },
-  {
-    name: 'Twitter',
-    icon: <FiTwitter size={20} />,
-    url: 'https://twitter.com/yourusername',
+    url: 'https://www.linkedin.com/in/aarondhillon04/',
   },
   {
     name: 'Email',
     icon: <FiMail size={20} />,
-    url: 'mailto:your.email@example.com',
+    url: 'mailto:aarondhillon57@gmail.com',
   },
 ];
 
@@ -48,7 +43,7 @@ const Footer = () => {
               Aaron Dhillon
             </Link>
             <p className="text-gray-600 dark:text-gray-300 mt-2">
-              Full Stack Developer & Tech Enthusiast
+            Software Engineer in Test & Developer
             </p>
           </motion.div>
 
