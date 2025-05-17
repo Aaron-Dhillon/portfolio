@@ -3,6 +3,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import Navbar from './components/Navbar';
 import Hero from './sections/Hero';
 import About from './sections/About';
+import Experience from './sections/Experience';
 import Projects from './sections/Projects';
 import Contact from './sections/Contact';
 import Footer from './components/Footer';
@@ -44,6 +45,7 @@ function App() {
         <AnimatePresence mode="wait">
           <Hero />
           <About />
+          <Experience />
           <Projects />
           <Contact />
         </AnimatePresence>
