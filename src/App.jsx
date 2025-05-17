@@ -9,12 +9,35 @@ import Contact from './sections/Contact';
 import Footer from './components/Footer';
 
 function App() {
-  const [isDarkMode, setIsDarkMode] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [darkMode, setDarkMode] = useState(false);
+
+  // Initialize dark mode from localStorage or system preference
+  useEffect(() => {
+    // Check for saved user preference, if any
+    const savedTheme = localStorage.getItem('theme');
+    const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+    
+    if (savedTheme === 'dark' || (!savedTheme && prefersDark)) {
+      setDarkMode(true);
+      document.documentElement.classList.add('dark');
+    } else {
+      document.documentElement.classList.remove('dark');
+    }
+  }, []);
 
   // Toggle dark mode
   const toggleDarkMode = () => {
-    setIsDarkMode(!isDarkMode);
+    const newDarkMode = !darkMode;
+    setDarkMode(newDarkMode);
+    
+    if (newDarkMode) {
+      document.documentElement.classList.add('dark');
+      localStorage.setItem('theme', 'dark');
+    } else {
+      document.documentElement.classList.remove('dark');
+      localStorage.setItem('theme', 'light');
+    }
   };
 
   // Close mobile menu when clicking on a nav link
@@ -22,26 +45,17 @@ function App() {
     setIsMenuOpen(false);
   };
 
-  // Apply dark mode class to html element
-  useEffect(() => {
-    if (isDarkMode) {
-      document.documentElement.classList.add('dark');
-    } else {
-      document.documentElement.classList.remove('dark');
-    }
-  }, [isDarkMode]);
-
   return (
-    <div className={`min-h-screen ${isDarkMode ? 'dark' : ''}`}>
+    <div className="min-h-screen flex flex-col bg-white dark:bg-gray-900 text-gray-900 dark:text-gray-100 transition-colors duration-300">
       <Navbar 
-        isDarkMode={isDarkMode} 
-        toggleDarkMode={toggleDarkMode}
+        isDarkMode={darkMode} 
+        toggleDarkMode={toggleDarkMode} 
         isMenuOpen={isMenuOpen}
         setIsMenuOpen={setIsMenuOpen}
         closeMenu={closeMenu}
       />
       
-      <main>
+      <main className="flex-grow pt-16 md:pt-20">
         <AnimatePresence mode="wait">
           <Hero />
           <About />

@@ -6,12 +6,17 @@ const Navbar = ({ isDarkMode, toggleDarkMode, isMenuOpen, setIsMenuOpen, closeMe
   const navLinks = [
     { name: 'Home', to: 'home' },
     { name: 'About', to: 'about' },
+    { name: 'Experience', to: 'experience' },
     { name: 'Projects', to: 'projects' },
     { name: 'Contact', to: 'contact' },
   ];
 
   return (
-    <header className="fixed w-full bg-white/80 dark:bg-gray-900/80 backdrop-blur-sm z-50 border-b border-gray-200 dark:border-gray-800">
+    <header
+      className={`fixed w-full bg-white/80 dark:bg-gray-900/80 backdrop-blur-sm z-50 border-b border-gray-200 dark:border-gray-800 ${
+        isMenuOpen ? 'bg-white/80 dark:bg-gray-900/80' : 'bg-transparent'
+      }`}
+    >
       <div className="container flex items-center justify-between h-16 md:h-20">
         {/* Logo */}
         <Link
