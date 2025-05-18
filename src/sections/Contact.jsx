@@ -56,16 +56,28 @@ const Contact = () => {
     setIsSubmitting(true);
     
     try {
-      // Replace with your form submission logic
-      console.log('Form submitted:', formData);
+      const response = await fetch('https://formspree.io/f/xovdrbby', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          name: formData.name,
+          email: formData.email,
+          message: formData.message,
+          _subject: 'New Contact Form Submission from Portfolio',
+        }),
+      });
       
-      // Simulate API call
-      await new Promise(resolve => setTimeout(resolve, 1500));
-      
-      setIsSubmitted(true);
-      setFormData({ name: '', email: '', message: '' });
+      if (response.ok) {
+        setIsSubmitted(true);
+        setFormData({ name: '', email: '', message: '' });
+      } else {
+        throw new Error('Failed to send message');
+      }
     } catch (error) {
       console.error('Error submitting form:', error);
+      setErrors({ submit: 'Failed to send message. Please try again later.' });
     } finally {
       setIsSubmitting(false);
     }
