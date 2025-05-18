@@ -12,7 +12,7 @@ const projects = [
   {
     id: 1,
     title: 'Previous Business Builders Website',
-    description: 'A dynamic website for the Business Builders student organization at The Ohio State University, designed to streamline member engagement and corporate relations. The platform features secure payment processing and an interactive interest form to connect students with professional development opportunities.',
+    description: 'A dynamic website for the Business Builders student organization at The Ohio State University. The platform features secure payment processing and an interest form to connect students with professional development opportunities.',
     tags: ['React', 'Node.js', 'Stripe', "Firebase"],
     image: bbWebsiteImage,
     github: 'https://github.com/Aaron-Dhillon/businessbuilders',
@@ -20,15 +20,12 @@ const projects = [
     features: [
       'Integrated Stripe payment processing for secure member dues and event payments',
       'Redesigned and enhanced the club interest form with updated fields and validation',
-      'Improved user experience with responsive design and intuitive navigation',
-      'Streamlined member data collection and management system',
-      'Enhanced security measures for payment processing'
     ]
   },
   {
     id: 2,
     title: 'Simple Blackjack',
-    description: 'A fully functional Blackjack game built with MATLAB featuring a graphical interface and computer opponent. Developed as a final assignment for a MATLAB-based course, this project demonstrates strong programming fundamentals and game logic implementation.',
+    description: 'A fully functional Blackjack game built with MATLAB featuring a graphical interface and computer opponent. Developed as a final assignment for an engineering course, this project demonstrates strong programming fundamentals and game logic implementation.',
     tags: ['MATLAB', 'SimpleGameEngine'],
     image: blackjackImage,
     github: 'https://github.com/Aaron-Dhillon/blackjack',
@@ -37,31 +34,26 @@ const projects = [
       'Complete Blackjack gameplay with card dealing, hand valuation, and win conditions',
       'Interactive graphical user interface with retro-style card assets',
       'Computer-controlled dealer with basic AI for hit/stand decisions',
-      'Built using MATLAB with custom functions for game mechanics',
-      'Clean code structure following functional decomposition principles'
     ]
   },
   {
     id: 3,
     title: 'Portfolio Website',
-    description: 'A modern, responsive portfolio website built with React and Framer Motion to showcase my projects and professional journey. Features smooth animations, dark mode, and a clean, accessible design that highlights my work effectively.',
+    description: 'A modern, responsive portfolio website built with React and Framer Motion to showcase my projects and professional journey.',
     tags: ['React', 'Framer Motion', 'Tailwind CSS', 'Vite', 'Responsive Design'],
     image: portfolioImage,
     github: 'https://github.com/Aaron-Dhillon/portfolio',
     live: null,
     features: [
       'Built with React 18 and Vite for optimal performance and fast development',
-      'Responsive design that works seamlessly across all device sizes',
       'Dark/light mode toggle with system preference detection',
       'Smooth page transitions and animations using Framer Motion',
-      'Modern UI with clean typography and accessible color schemes',
-      'Optimized for performance and SEO best practices'
     ]
   },
   {
     id: 4,
     title: 'Turbine Web Application',
-    description: 'A data visualization and machine learning platform for analyzing wind turbine efficiency, developed for the 2022 OHIO Hackathon. The application evaluates turbine performance using real-world data and weather conditions to predict efficiency and feasibility.',
+    description: 'A data visualization and machine learning web application for analyzing wind turbine efficiency, developed for the 2022 OHIO Hackathon. The application evaluates turbine performance using real data and weather conditions to predict efficiency.',
     tags: ['Machine Learning', 'Data Visualization', 'Web Development', 'Hackathon Project'],
     image: turbineImage,
     github: 'https://github.com/SuvanD0/Hack2022',
@@ -69,12 +61,9 @@ const projects = [
     features: [
       'Analyzes AEP\'s Oklahoma wind turbine data using machine learning algorithms',
       'Interactive visualization of turbine performance metrics and efficiency ratings',
-      'Integration with weather APIs to assess turbine feasibility in different conditions',
-      'Developed as part of a team for the 2022 OHIO Hackathon',
       'Solves real-world challenges in renewable energy optimization'
     ]
   },
-  // Add more projects as needed
 ];
 
 const ProjectCard = ({ project, index }) => {

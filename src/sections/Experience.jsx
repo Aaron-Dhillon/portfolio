@@ -23,11 +23,6 @@ const experiences = [
     company: 'Hubble',
     period: 'Jan 2024 - Apr 2024',
     location: 'Worthington, OH',
-    description: [
-      'Built features using Ruby, Rails, and PostgreSQL, focusing on APIs, schema design, and queries, enhancing system performance by 15%',
-      'Optimized performance with Redis caching and Sidekiq background job processing, reducing system runtime by 10%',
-      'Developed responsive interfaces with Hotwired (Turbo & StimulusJS) and front-end technologies, improving user satisfaction by 50%'
-    ],
     skills: ['Ruby', 'Rails', 'PostgreSQL', 'Redis', 'Sidekiq', 'Hotwired'],
     icon: <FiBriefcase className="w-6 h-6" />
   },
@@ -37,11 +32,6 @@ const experiences = [
     company: 'WebstaurantStore',
     period: 'May 2024 - Sep 2024',
     location: 'Lititz, PA',
-    description: [
-      'Developed 15+ automated tests using Groovy and Selenium WebDriver, covering 50+ unique test cases, increasing test coverage by 25%',
-      'Integrated UI/API testing into CI/CD with Azure DevOps, enhancing team efficiency and reliability',
-      'Wrote 10+ SQL scripts to ensure continuity between internal APIs and databases, improving data reliability'
-    ],
     skills: ['Groovy', 'Selenium WebDriver', 'SQL', 'Azure DevOps'],
     icon: <FiCode className="w-6 h-6" />
   },
@@ -51,11 +41,6 @@ const experiences = [
     company: 'Business Builders',
     period: 'Sep 2024 - May 2025',
     location: 'Columbus, OH',
-    description: [
-      'Developed Business Builders website using React, engaging 30+ members and 200+ alumni, enhancing user engagement by 20%',
-      'Designed an alumni portal to connect alumni with the club through sponsorship & C-suite level mentorship, increasing alumni participation by 50%',
-      'Implemented Agile methodologies with a Notion dashboard, managing tasks across teams with 2-week sprints, improving project completion rate by 30%'
-    ],
     skills: ['React', 'Agile', 'Notion'],
     icon: <FiUsers className="w-6 h-6" />
   },
@@ -65,11 +50,6 @@ const experiences = [
     company: 'The Ohio State University',
     period: 'Jan 2025 - May 2025',
     location: 'Columbus, OH',
-    description: [
-      'Evaluated assignments for 100+ students, providing detailed, constructive feedback to enhance learning outcomes, improving overall student performance by 50%',
-      'Graded assignments and labs on data structures, focusing on key concepts such as OOP and recursion, ensuring a comprehensive understanding of fundamental CS concepts',
-      'Facilitated student understanding of complex course material through dedicated office hours, increasing student engagement and satisfaction by 100%'
-    ],
     skills: ['Data Structures', 'Object-Oriented Programming', 'Recursion', 'Java'],
     icon: <FiBriefcase className="w-6 h-6" />
   },
@@ -79,10 +59,6 @@ const experiences = [
     company: 'Appian',
     period: 'June 2025 - August 2025',
     location: 'McLean, VA',
-    description: [
-      'Exciting new opportunity starting soon!',
-      'Check back in June for updates on my summer internship experience.'
-    ],
     skills: [],
     icon: <FiBriefcase className="w-6 h-6" />,
     isUpcoming: true
@@ -126,7 +102,7 @@ const ExperienceCard = ({ experience }) => {
       
       {/* Card Content */}
       <div className="bg-white dark:bg-gray-800 rounded-xl p-6 shadow-lg hover:shadow-xl transition-shadow">
-        <div className="flex items-start justify-between mb-4">
+        <div className="flex items-start justify-between mb-2">
           <div>
             <h3 className="text-xl font-bold text-gray-900 dark:text-white">{experience.role}</h3>
             <div className="flex items-center text-gray-600 dark:text-gray-300">
@@ -140,29 +116,9 @@ const ExperienceCard = ({ experience }) => {
           </div>
         </div>
         
-        <ul className="space-y-2 mb-4">
-          {experience.description.map((item, index) => (
-            <li key={index} className="flex items-start">
-              <span className="text-blue-500 mr-2">•</span>
-              <span className="text-gray-600 dark:text-gray-300">{item}</span>
-            </li>
-          ))}
-        </ul>
-        
-        {experience.isUpcoming ? (
-          <div className="flex justify-center mt-4 pt-4 border-t border-gray-100 dark:border-gray-700">
-            <div className="text-gray-600 dark:text-gray-300 text-lg font-medium">Coming Soon...</div>
-          </div>
-        ) : (
-          <div className="flex flex-wrap gap-2 mt-4 pt-4 border-t border-gray-100 dark:border-gray-700">
-            {experience.skills.map((skill, index) => (
-              <span
-                key={index}
-                className="px-3 py-1 bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-200 text-xs font-medium rounded-full"
-              >
-                {skill}
-              </span>
-            ))}
+        {experience.isUpcoming && (
+          <div className="mt-4 pt-4 border-t border-gray-100 dark:border-gray-700">
+            <div className="text-gray-600 dark:text-gray-300 text-lg font-medium text-center">Coming Soon...</div>
           </div>
         )}
       </div>

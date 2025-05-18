@@ -13,10 +13,6 @@ const About = () => {
         >
           <h2 className="text-3xl md:text-4xl font-bold mb-4">About Me</h2>
           <div className="w-20 h-1 bg-blue-600 dark:bg-blue-400 mx-auto mb-8"></div>
-          <p className="max-w-3xl mx-auto">
-            A passionate learner and problem-solver on a never-ending journey to master software development and test automation.
-            I believe in continuous growth and applying new knowledge to build meaningful, high-quality solutions.
-          </p>
         </motion.div>
 
         <div className="max-w-3xl mx-auto">
@@ -27,7 +23,7 @@ const About = () => {
             transition={{ duration: 0.5, delay: 0.2 }}
           >
             <div className="bg-white dark:bg-gray-700 p-8 rounded-xl shadow-md">
-              <h3 className="text-2xl font-semibold mb-6">Who Am I?</h3>
+              <h3 className="text-2xl font-semibold mb-6">Who I Am</h3>
               <div className="space-y-4 text-gray-600 dark:text-gray-300">
                 <p>
                   I'm a Computer Science student at The Ohio State University with a passion for learning, software testing, and development. I love diving into new technologies and ensuring software quality.
@@ -36,10 +32,10 @@ const About = () => {
                   When I'm not coding, you can find me playing basketball, pickleball, or occasionally tennis (though I'm not winning any championships anytime soon).
                 </p>
                 <p>
-                  LeBron James is the GOAT - let's settle that debate.
+                  LeBron James is the GOAT(let's settle that debate).
                 </p>
                 <p>
-                  Taco Bell enthusiast and late-night library regular - the perfect study break combo.
+                  Taco Bell enthusiast and late-night library regular. The perfect study break combo.
                 </p>
               </div>
             </div>
