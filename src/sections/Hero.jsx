@@ -1,6 +1,7 @@
 import { motion } from 'framer-motion';
 import { FiChevronDown } from 'react-icons/fi';
 import { Link } from 'react-scroll';
+import headshot from '../assets/headshot.jpeg';
 
 const Hero = () => {
   return (
@@ -50,10 +51,11 @@ const Hero = () => {
           >
             <div className="relative z-10 w-4/5 mx-auto lg:w-full max-w-md">
               <div className="aspect-square bg-gradient-to-br from-blue-500 to-blue-700 rounded-2xl shadow-2xl overflow-hidden">
-                {/* Replace with your image */}
-                <div className="w-full h-full flex items-center justify-center text-white">
-                  <span className="text-4xl">👨‍💻</span>
-                </div>
+                <img 
+                  src={headshot} 
+                  alt="Aaron Dhillon"
+                  className="w-full h-full object-cover"
+                />
               </div>
               <div className="absolute -bottom-6 -right-6 w-32 h-32 bg-yellow-400 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-blob"></div>
               <div className="absolute -top-6 -left-6 w-32 h-32 bg-blue-400 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-blob animation-delay-2000"></div>
