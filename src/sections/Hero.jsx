@@ -20,7 +20,7 @@ const Hero = () => {
             Software Engineer in Test & Developer
             </h2>
             <p className="text-lg md:text-xl text-gray-600 dark:text-gray-300 mb-8 max-w-2xl mx-auto lg:mx-0">
-              I build exceptional digital experiences with modern technologies and clean, efficient code.
+              Continuously learning and growing in software development, test automation, and building impactful solutions.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
               <Link

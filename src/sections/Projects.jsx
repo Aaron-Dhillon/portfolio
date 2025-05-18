@@ -1,6 +1,11 @@
 import { motion } from 'framer-motion';
 import { FiGithub, FiExternalLink } from 'react-icons/fi';
 import { useEffect, useRef, useState } from 'react';
+import bbWebsiteImage from '../assets/bbwebsite_pic.png';
+import blackjackImage from '../assets/blackjack.png';
+import turbineImage from '../assets/turbine.png';
+import portfolioImage from '../assets/portfoliopic.png';
+
 
 // Sample projects data - replace with your actual projects
 const projects = [
@@ -8,8 +13,8 @@ const projects = [
     id: 1,
     title: 'Previous Business Builders Website',
     description: 'A dynamic website for the Business Builders student organization at The Ohio State University, designed to streamline member engagement and corporate relations. The platform features secure payment processing and an interactive interest form to connect students with professional development opportunities.',
-    tags: ['React', 'Node.js', 'Stripe',"Firebase"],
-    image: 'https://via.placeholder.com/600x400/1e40af/ffffff?text=Business+Builders',
+    tags: ['React', 'Node.js', 'Stripe', "Firebase"],
+    image: bbWebsiteImage,
     github: 'https://github.com/Aaron-Dhillon/businessbuilders',
     live: 'https://bbcosu.org/',
     features: [
@@ -25,7 +30,7 @@ const projects = [
     title: 'Simple Blackjack',
     description: 'A fully functional Blackjack game built with MATLAB featuring a graphical interface and computer opponent. Developed as a final assignment for a MATLAB-based course, this project demonstrates strong programming fundamentals and game logic implementation.',
     tags: ['MATLAB', 'SimpleGameEngine'],
-    image: 'https://via.placeholder.com/600x400/1e40af/ffffff?text=MATLAB+Blackjack',
+    image: blackjackImage,
     github: 'https://github.com/Aaron-Dhillon/blackjack',
     live: null,
     features: [
@@ -41,7 +46,7 @@ const projects = [
     title: 'Portfolio Website',
     description: 'A modern, responsive portfolio website built with React and Framer Motion to showcase my projects and professional journey. Features smooth animations, dark mode, and a clean, accessible design that highlights my work effectively.',
     tags: ['React', 'Framer Motion', 'Tailwind CSS', 'Vite', 'Responsive Design'],
-    image: 'https://via.placeholder.com/600x400/1e40af/ffffff?text=Portfolio',
+    image: portfolioImage,
     github: 'https://github.com/Aaron-Dhillon/portfolio',
     live: null,
     features: [
@@ -58,7 +63,7 @@ const projects = [
     title: 'Turbine Web Application',
     description: 'A data visualization and machine learning platform for analyzing wind turbine efficiency, developed for the 2022 OHIO Hackathon. The application evaluates turbine performance using real-world data and weather conditions to predict efficiency and feasibility.',
     tags: ['Machine Learning', 'Data Visualization', 'Web Development', 'Hackathon Project'],
-    image: 'https://via.placeholder.com/600x400/1e40af/ffffff?text=Wind+Turbine',
+    image: turbineImage,
     github: 'https://github.com/SuvanD0/Hack2022',
     live: null,
     features: [
