@@ -7,7 +7,6 @@ import appianLogo from '../assets/appian_corporation_logo.jpeg';
 import { motion } from 'framer-motion';
 import { FiBriefcase, FiAward, FiCode, FiUsers } from 'react-icons/fi';
 
-// Placeholder logo URLs - replace these with your actual logos later
 const COMPANY_LOGOS = {
   'Hubble': hubbleLogo,
   'WebstaurantStore': webstaurantLogo,

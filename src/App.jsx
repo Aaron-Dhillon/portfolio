@@ -12,9 +12,7 @@ function App() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [darkMode, setDarkMode] = useState(false);
 
-  // Initialize dark mode from localStorage or system preference
   useEffect(() => {
-    // Check for saved user preference, if any
     const savedTheme = localStorage.getItem('theme');
     const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
     
@@ -26,7 +24,6 @@ function App() {
     }
   }, []);
 
-  // Toggle dark mode
   const toggleDarkMode = () => {
     const newDarkMode = !darkMode;
     setDarkMode(newDarkMode);
@@ -40,7 +37,6 @@ function App() {
     }
   };
 
-  // Close mobile menu when clicking on a nav link
   const closeMenu = () => {
     setIsMenuOpen(false);
   };
