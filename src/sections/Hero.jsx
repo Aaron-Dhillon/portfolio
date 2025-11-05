@@ -18,7 +18,7 @@ const Hero = () => {
               Hi, I'm <span className="text-blue-600 dark:text-blue-400">Aaron Dhillon</span>
             </h1>
             <h2 className="text-2xl md:text-3xl font-semibold text-gray-600 dark:text-gray-300 mb-6">
-            Software Engineer in Test & Developer
+            Aspiring Software Developer
             </h2>
             <p className="text-lg md:text-xl text-gray-600 dark:text-gray-300 mb-8 max-w-2xl mx-auto lg:mx-0">
               Continuously learning and growing in software development, test automation, and building impactful solutions.

@@ -26,7 +26,7 @@ const About = () => {
               <h3 className="text-2xl font-semibold mb-6">Who I Am</h3>
               <div className="space-y-4 text-gray-600 dark:text-gray-300">
                 <p>
-                  I'm a Computer Science student at The Ohio State University with a passion for learning, software testing, and development. I love diving into new technologies and ensuring software quality.
+                  I'm a Computer Science student at The Ohio State University with a passion for learning, software development, and testing. I love diving into new technologies and ensuring software quality.
                 </p>
                 <p>
                   When I'm not coding, you can find me playing basketball, pickleball, or occasionally tennis (though I'm not winning any championships anytime soon).

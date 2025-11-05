@@ -27,7 +27,7 @@ const experiences = [
   },
   {
     id: 2,
-    role: 'Software QA Intern',
+    role: 'Software Engineer Intern',
     company: 'WebstaurantStore',
     period: 'May 2024 - Sep 2024',
     location: 'Lititz, PA',
@@ -54,7 +54,7 @@ const experiences = [
   },
   {
     id: 5,
-    role: 'Software QE Intern',
+    role: 'Software Engineer Intern',
     company: 'Appian',
     period: 'June 2025 - August 2025',
     location: 'McLean, VA',
