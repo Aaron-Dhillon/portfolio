@@ -43,7 +43,7 @@ const Footer = () => {
               Aaron Dhillon
             </Link>
             <p className="text-gray-600 dark:text-gray-300 mt-2">
-            Software Engineer in Test & Developer
+            Software Engineer
             </p>
           </motion.div>
 
