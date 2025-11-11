@@ -60,7 +60,7 @@ const experiences = [
     location: 'McLean, VA',
     skills: [],
     icon: <FiBriefcase className="w-6 h-6" />,
-    isUpcoming: true
+
   }
 
 ];
